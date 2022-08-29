@@ -1,0 +1,48 @@
+﻿
+    @model AppMVC.Models.Login
+
+@{
+    ViewData["Title"] = "Añadir Login";
+}
+
+<p>
+    <a asp-action="Create">Añadir Logins</a>
+</p>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card border">
+            <div class="card-header">
+                <h3 class="text-center">Añadir Login</h3>
+            </div>
+            <div class="card-body">
+               <form asp-action="Crear" method="post">
+                   <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                   <div class="form-group">
+                    <label asp-for="Link" class="control-label"></label>
+                    <input asp-for="Link" class="form-control" />
+                    <span asp-validation-for="Link" class="text-danger"></span>
+                   </div>
+
+                   <div class="form-group">
+                    <label asp-for="Usuario" class="control-label"></label>
+                    <input asp-for="Usuario" class="form-control" />
+                    <span asp-validation-for="Usuario" class="text-danger"></span>
+                   </div>
+
+                    <div class="form-group">
+                        <label asp-for="Contraseña" class="control-label"></label>
+                        <input asp-for="Contraseña" class="form-control" />
+                        <span asp-validation-for="Contraseña" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Añadir Login</button>
+                    </div>
+               </form>
+            </div>
+        </div>
+    </div>
+</div>
+
